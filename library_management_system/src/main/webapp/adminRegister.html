@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Admin Registration</title>
+<link rel="stylesheet" type="text/css"
+	href="resources/css/adminRegistration.css">
+<script type="text/javascript">
+function validate() {
+    var fname = document.getElementById("name").value.trim();
+    if (fname === "") {
+        alert("Enter Name!");
+        return false;
+    }
+
+    var email = document.getElementById("email").value.trim();
+    if (email === "") {
+        alert("Enter Email!");
+        return false;
+    }
+
+    // Validate email format here if needed
+
+    var password = document.getElementById("password").value.trim();
+    if (password === "") {
+        alert("Password is Mandatory!");
+        return false;
+    }
+    if (password.length < 8) {
+        alert("Password should be at least 8 characters long!");
+        return false;
+    }
+
+    if (!document.signupform.check.checked) {
+        alert("Please Agree to Terms and Conditions!");
+        return false;
+    }
+
+    return true; // Form submission allowed
+}
+</script>
+</head>
+<body>
+	<h1>Admin Registration Form</h1>
+	<form action="serv2" method="post" onsubmit="return validate();"
+		name="signupform">
+		<table class="login">
+			<tr>
+				<td>Enter Your Name:</td>
+				<td><input type="text" name="name" id="name"></td>
+			</tr>
+			<tr>
+				<td>Enter Your Email:</td>
+				<td><input type="email" name="email" id="email"></td>
+			</tr>
+			<tr>
+				<td>Select Designation:</td>
+				<td><select name="designation">
+						<option value="select" selected>Select</option>
+						<option value="Librarian">Librarian</option>
+						<option value="Teacher">Teacher</option>
+						<option value="Principal">Principal</option>
+						<option value="HOD">HOD</option>
+
+				</select></td>
+			</tr>
+			<tr>
+				<td>Enter Your Number:</td>
+				<td><input type="number" name="phoneNo" id="phoneNo"></td>
+			</tr>
+			<tr>
+				<td>Enter Your Password:</td>
+				<td><input type="password" name="password" id="password"></td>
+			</tr>
+			<tr>
+				<td>I Agree to Terms and Conditions</td>
+				<td><input type="checkbox" name="check"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><button type="submit">Sign Up</button></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

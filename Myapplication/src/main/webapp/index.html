@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="resources/css/style.css">
+
+</head>
+<script type="text/javascript">
+function validate(){
+	fname=document.getElementById("fname").value;
+	if(fname.trim()==""){
+		alert("Enter First Name!");
+		return false;
+	}
+	lname=document.getElementById("lname").value;
+	if(lname.trim()==""){
+		alert("Enter Last Name!");
+		return false;
+	}
+	
+	if((document.signupform.gender[0].checked==false)&&
+			(document.signupform.gender[1].checked==false))
+		{
+		alert("Please Select your Gender");
+		return false;
+		}
+	if(document.signupform.check.checked==false){
+		alert("Please Agree Terms and Conditions!");
+		return false;
+	}
+	if(document.signupform.age.selectedIndex==0){
+		alert("Please Select Age!");
+		return false;
+	}
+	password=document.getElementById("password").value;
+	if(password.trim()==""){
+		alert("Password is Mandatory!");
+		return false;
+	}
+	if(password.trim().length()<9){
+		alert("Password is Mandatory!");
+		return false;
+	}
+	
+}
+</script>
+<style>
+td{
+border:2px;}
+</style>
+<body>
+<h1>Registration Form</h1>
+<form action="login.html" method="get" onsubmit="return validate();" name="signupform">
+<table class="login">
+<tr>
+<td>Enter Your First Name: </td>
+<td><input type="text" name="fname" id="fname"></input></td>
+</tr>
+<tr>
+<td>Enter Your Last Name: </td>
+<td><input type="text"  name="lname" id="lname"></input></td>
+</tr>
+<tr>
+<td>Select Your Age:</td>
+<td> <select name="age"> 
+<option value="select" selected="selected">Select</option>
+<option value="0-18">0-18</option>
+<option value="19-25">19-25</option>
+<option value="26-35">26-35</option>
+<option value="36-45">35-45</option>
+<option value="46-55">45-55</option></select></td>
+</tr>
+<tr>
+<td>Gender</td>
+<td>
+Male <input type="radio" name="gender">
+Female <input type="radio" name="gender"></td>
+</tr>
+<tr>
+<td>Enter Your Password: </td>
+<td><input type="password"  name="password" id="password"></input></td>
+</tr>
+<tr>
+
+<td>I Agree to Terms and Conditions</td>
+<td><input type="checkbox" name="check"></input></td>
+</tr>
+<tr><td></td><td><button type="submit">Sign Up</button></td></tr>
+</table></form>
+</body>
+</html>

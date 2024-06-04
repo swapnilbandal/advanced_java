@@ -1,0 +1,52 @@
+@charset "ISO-8859-1";
+/* Add some padding and margin to the body */
+body {
+	padding: 20px;
+	margin: 0;
+}
+
+/* Style the header */
+h1 {
+	text-align: center;
+	color: #333; /* Dark gray color */
+}
+
+/* Style the table */
+table {
+	width: 100%; /* Extend the table to full width */
+	border-collapse: collapse;
+	margin-top: 20px; /* Add some space between header and table */
+}
+
+/* Style table header cells */
+th {
+	background-color: #f2f2f2; /* Light gray background */
+	border: 1px solid #ddd; /* Light gray border */
+	padding: 10px;
+	text-align: left;
+}
+
+/* Style table data cells */
+td {
+	border: 1px solid #ddd; /* Light gray border */
+	padding: 10px;
+}
+
+/* Style the Borrow button */
+input[type="button"] {
+	background-color: #4CAF50; /* Green background color */
+	border: none;
+	border-radius: 5px;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+input[type="button"]:hover {
+	background-color: #45a049;
+}

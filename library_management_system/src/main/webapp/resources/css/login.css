@@ -1,0 +1,54 @@
+/* login.css */
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f4f4f4;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	width: 500px;
+	height: 300px;
+	margin: 100px auto;
+	background: #fff;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.container table {
+	width: 100%;
+}
+
+.container table td {
+	padding: 10px;
+}
+
+.container input[type="email"], .container input[type="password"] {
+	width: 80%;
+	padding: 8px;
+	margin: 3px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+
+.container button[type="submit"] {
+	width: 100%;
+	padding: 10px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.container button[type="submit"]:hover {
+	background-color: #0056b3;
+}
