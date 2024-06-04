@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login Page</title>
+<link rel="stylesheet" type="text/css" href="resources/css/login.css">
+</head>
+<script>
+function validate(){
+	
+	if(document.loginform.uname.value.trim()==""){
+		alert("Enter User Name")
+		return false;
+	}
+	if(document.loginform.password.value.trim()==""){
+		alert("Please Enter Password")
+		return false;
+	}
+}
+</script>
+<body>
+<h1>Login Form</h1>
+<form action="MyServlet" method="get" onsubmit="return validate()" name="loginform">
+<table>
+<tr><td>Enter Your User name:</td><td><input type="text" name="userName"></input></td></tr>
+<tr><td>Enter Your Password: </td><td><input type="password" name="password"></input></td></tr>
+<tr><td></td><td><button type="submit">Log In</button>   </td></tr></table></form>
+</body>
+</html>
